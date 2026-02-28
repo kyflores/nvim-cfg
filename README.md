@@ -9,9 +9,28 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 These programs need to be installed separately for plugins to call.
 * rust-analyzer
 * [clangd](https://github.com/clangd/clangd)
-* pyright
+* basedpyright
 * npm
 * [lazygit](https://github.com/jesseduffield/lazygit) (run it once to generate config)
+
+## With brew
+Some of these packages aren't distributed by apt but can be found in brew.
+```
+# Packages for LSPs, and neovim itself
+brew install neovim lazygit npm basedpyright rust
+# Example of installing a nerdfont for lazyvim icons to work. 
+brew install --cask font-jetbrains-mono-nerd-font
+# Example of setting the fonts as terminal default
+gsettings set org.gnome.Ptyxis font-name 'JetBrainsMono Nerd Font 10'
+```
+
+# Reset Lazy
+```
+rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.cache/nvim
+```
+
 
 # Most used keymaps
 C -> ctrl, S -> shift, A -> alt, leader -> space (by default)
